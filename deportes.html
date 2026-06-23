@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Torneos Deportivos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Torneos | Cantera</title>
+    <meta name="description" content="Conoce los torneos de fútbol, futsal, baloncesto y voleibol organizados por Cantera en Soacha. Fechas, categorías e inscripciones.">
+    <link rel="icon" type="image/png" href="assets/images/Logo.png">
+    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="assets/CSS/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -57,7 +58,7 @@
 
     <main>
         <!-- Íconos de Deportes -->
-        <section class="py-4 bg-white text-center">
+        <section class="py-4 text-center">
             <div class="container pb-3 mt-3">
                 <div class="row justify-content-center align-items-end g-2 g-md-4">
                     <div class="col-3 col-md-2" style="position: relative;">
@@ -90,10 +91,10 @@
             </div>
         </section>
 
-        <!-- Divisor Oscuro tipo Swoosh -->
-        <div class="curve-divider curve-divider-footer my-0" style="height: 45px; transform: scaleY(0.7);"></div>
+        <!-- Divisor de curvas fluidas (estilo nosotros/home) -->
+        <div class="curve-divider curve-divider-blue my-4"></div>
 
-        <section class="py-5 bg-white">
+        <section class="py-5">
             <div class="container pt-4 pb-5">
                 
                 <!-- Título Torneos -->
@@ -217,20 +218,40 @@
     </main>
 
     <div class="curve-divider curve-divider-red my-0"></div>
-    <footer class="bg-white text-dark py-4">
-        <div class="container-fluid px-5">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    <h5 class="text-uppercase mb-2">Información Pertinente</h5>
-                    <p class="mb-1">&copy; 2026 Deportes. Todos los derechos reservados.</p>
-                    <p class="mb-0">Email: contacto@deportes.com | Tel: +123 456 7890</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
+    <footer class="site-footer pt-5 pb-4">
+        <div class="container">
+            <div class="row gy-4 align-items-start">
+                <div class="col-md-4 text-center text-md-start">
                     <a href="index.html">
-                        <img src="./assets/images/Logo.png" alt="Logo Footer" style="max-width: 200px;">
+                        <img src="./assets/images/Logo.png" alt="Logo Cantera" style="max-width: 180px;">
                     </a>
+                    <p class="footer-meta mt-3 mb-0">Deporte, formación y comunidad en Soacha. Formamos talento en fútbol, futsal, baloncesto y voleibol.</p>
+                </div>
+                <div class="col-6 col-md-4 text-center">
+                    <h5 class="text-uppercase mb-3">Navegación</h5>
+                    <div class="d-flex flex-column gap-2">
+                        <a class="footer-link" href="index.html">Inicio</a>
+                        <a class="footer-link" href="deportes.html">Torneos</a>
+                        <a class="footer-link" href="escuelas.html">Escuelas</a>
+                        <a class="footer-link" href="nosotros.html">Nosotros</a>
+                        <a class="footer-link" href="blog.html">Blog</a>
+                        <a class="footer-link" href="contacto.html">Contacto</a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 text-center text-md-start">
+                    <h5 class="text-uppercase mb-3">Contacto</h5>
+                    <p class="footer-meta mb-2"><i class="bi bi-geo-alt me-2"></i>Soacha, Cundinamarca</p>
+                    <p class="footer-meta mb-2"><i class="bi bi-envelope me-2"></i>contacto@cantera.co</p>
+                    <p class="footer-meta mb-3"><i class="bi bi-whatsapp me-2"></i>301 8318624</p>
+                    <div class="footer-social d-flex justify-content-center justify-content-md-start gap-2">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
                 </div>
             </div>
+            <hr class="my-4" style="border-color: rgba(0,0,0,0.1);">
+            <p class="footer-meta text-center mb-0">&copy; 2026 Cantera. Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -244,9 +265,7 @@
             }
         };
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

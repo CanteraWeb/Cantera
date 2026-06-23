@@ -4,43 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Blog | Cantera</title>
+    <meta name="description" content="Noticias, resultados y consejos del deporte local. Toda la actualidad de Cantera y el deporte de Soacha en un solo lugar.">
+    <link rel="icon" type="image/png" href="assets/images/Logo.png">
+    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="assets/CSS/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
 </head>
 
 <body>
 
     <header class="fixed-top shadow-sm w-100" style="background-color: #f4f4f4;">
-        <nav class="navbar navbar-expand" style="background-color: #f4f4f4;">
+        <nav class="navbar navbar-expand-lg" style="background-color: #f4f4f4;">
             <div class="container">
-                <a href="index.html"><img class="imagen-logo navbar-brand" src="./assets/images/Logo.png" alt="Logo"></a>
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Deportes
-                        </a>
-                        <ul class="dropdown-menu shadow border-0">
-                            <li><a class="dropdown-item" href="deportes.html">Torneos</a></li>
-                            <li><a class="dropdown-item" href="escuelas.html">Escuelas</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="nosotros.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
-                    <button class="btn btn-outline-info" type="submit">Buscar</button>
-                </form>
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img class="imagen-logo" src="./assets/images/Logo.png" alt="Logo Cantera">
+                </a>
+                <!-- Botón Hamburguesa -->
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navCantera" aria-controls="navCantera" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Contenido colapsable -->
+                <div class="collapse navbar-collapse" id="navCantera">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Deportes
+                            </a>
+                            <ul class="dropdown-menu shadow border-0 text-center text-lg-start">
+                                <li><a class="dropdown-item" href="deportes.html">Torneos</a></li>
+                                <li><a class="dropdown-item" href="escuelas.html">Escuelas</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3 mt-lg-0" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
+                        <button class="btn btn-outline-info" type="submit">Buscar</button>
+                    </form>
+                </div>
             </div>
         </nav>
     </header>
@@ -52,7 +63,7 @@
                 <!-- Indicadores y Controles inferiores simulando el diseño previo -->
                 <div class="carousel-indicators align-items-center shadow-lg" style="background-color: #1a1a1a; border-radius: 30px; padding: 12px 30px; margin-bottom: 20px; border-bottom: 2px solid #555;">
                     <!-- Botón falso de detener y su estilo -->
-                    <div class="text-white text-uppercase d-flex align-items-center me-4" style="font-size: 0.8rem; letter-spacing: 2px;" data-bs-target="#blogCarousel" data-bs-slide="pause" style="cursor: pointer;">
+                    <div class="text-white text-uppercase d-flex align-items-center me-4" style="font-size: 0.8rem; letter-spacing: 2px; cursor: pointer;" data-bs-target="#blogCarousel" data-bs-slide="pause">
                         <span class="fst-italic me-2 fw-bold" style="cursor:pointer;" onclick="var c=bootstrap.Carousel.getInstance(document.getElementById('blogCarousel')); c.pause();">Detener</span>
                         <div class="bg-white" style="width: 10px; height: 10px; cursor:pointer;" onclick="var c=bootstrap.Carousel.getInstance(document.getElementById('blogCarousel')); c.pause();"></div>
                     </div>
@@ -68,10 +79,10 @@
                         <img src="assets/images/CARRUSEL1.jpg" class="d-block w-100 h-100" style="object-fit: cover;" alt="Banner 1">
                     </div>
                     <div class="carousel-item h-100">
-                        <img src="assets/images/CARRUSEL2.png" class="d-block w-100 h-100" style="object-fit: cover;" alt="Banner 2">
+                        <img src="assets/images/CARRUSEL2.jpg" class="d-block w-100 h-100" style="object-fit: cover;" alt="Banner 2">
                     </div>
                     <div class="carousel-item h-100 bg-dark d-flex align-items-center justify-content-center">
-                        <img src="assets/images/CARRUSEL3.png" class="d-block w-100 h-100" style="object-fit: cover; opacity: 0.5;" alt="Banner 3">
+                        <img src="assets/images/CARRUSEL3.jpg" class="d-block w-100 h-100" style="object-fit: cover; opacity: 0.5;" alt="Banner 3">
                     </div>
                 </div>
 
@@ -88,14 +99,14 @@
         </section>
 
         <!-- Título principal -->
-        <section class="pt-5 pb-4" style="border-bottom: 2px solid #d1d5db; background-color: #fbfbfb;">
+        <section class="pt-5 pb-4" style="border-bottom: 2px solid #d1d5db;">
             <div class="container text-center py-4">
                 <h2 class="fw-bold" style="font-size: 2.6rem;">Toda la actualidad del <span class="text-danger">deporte local</span> en un<br>solo lugar.</h2>
             </div>
         </section>
 
         <!-- Bloques de Blog intercalados -->
-        <section class="py-5 bg-white">
+        <section class="py-5">
             <div class="container py-3">
 
                 <!-- Bloque 1 (Izquierda: Imagen, Derecha: Texto) -->
@@ -108,7 +119,7 @@
                         <div class="position-absolute" style="bottom:-8px; left:-8px; width: 45px; height: 45px; border-bottom: 2px solid #dc3545; border-left: 2px solid #dc3545; border-bottom-left-radius: 12px;"></div>
                         
                         <div class="rounded-4 overflow-hidden position-relative shadow" style="border: 4px solid #dc3545; z-index: 1;">
-                            <img src="assets/images/GOLES.png" class="img-fluid w-100" style="object-fit: cover; height: 280px;">
+                            <img src="assets/images/GOLES.jpg" class="img-fluid w-100" style="object-fit: cover; height: 280px;">
                             <div class="position-absolute bottom-0 start-0 p-3 w-100" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
                                 <h2 class="text-white fw-bold fst-italic mb-0" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">LOS MEJORES<br>GOLAZOS</h2>
                                 <small class="text-success fw-bold d-block mt-1">TORNEO DEL BARRIO - 8VA EDICIÓN</small>
@@ -116,7 +127,7 @@
                         </div>
                     </div>
                     <div class="col-md-7 ps-md-5">
-                        <p class="fs-4 text-dark opacity-75" style="line-height: 1.5; font-family: sans-serif;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                        <p class="fs-4 text-dark opacity-75" style="line-height: 1.5;">Revive los goles más espectaculares de la octava edición del Torneo del Barrio. Durante tres semanas, los equipos de Soacha demostraron que el talento sobra en cada cancha: definiciones de primera, jugadas colectivas y celebraciones que encendieron a la afición. Te dejamos el resumen de las mejores acciones y de los protagonistas que ya sueñan con la próxima edición.</p>
                     </div>
                 </div>
 
@@ -125,7 +136,7 @@
                 <!-- Bloque 2 (Izquierda: Texto, Derecha: Imagen) -->
                 <div class="row align-items-center my-5 py-5 flex-column-reverse flex-md-row">
                     <div class="col-md-7 pe-md-5 mb-4 mb-md-0 text-md-end">
-                        <p class="fs-4 text-dark opacity-75" style="line-height: 1.5; font-family: sans-serif;">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                        <p class="fs-4 text-dark opacity-75" style="line-height: 1.5;">El futsal vive su mejor momento en la región. La intensidad, la técnica y el ritmo vertiginoso de la Liga Futsal Nacional confirman por qué este deporte gana cada vez más adeptos. Analizamos el rendimiento de nuestros equipos, las claves tácticas que marcaron la diferencia y lo que viene para los jugadores que apuestan por dar el salto al alto nivel.</p>
                     </div>
                     <div class="col-md-5 position-relative">
                         <!-- Esquinas invertidas: top-left & bottom-right -->
@@ -135,7 +146,7 @@
                         <div class="position-absolute" style="bottom:-8px; right:-8px; width: 45px; height: 45px; border-bottom: 2px solid #dc3545; border-right: 2px solid #dc3545; border-bottom-right-radius: 12px;"></div>
                         
                         <div class="rounded-4 overflow-hidden position-relative shadow" style="border: 4px solid #dc3545; z-index: 1;">
-                            <img src="assets/images/VELOCIDAD.png" class="img-fluid w-100" style="object-fit: cover; height: 280px;">
+                            <img src="assets/images/VELOCIDAD.jpg" class="img-fluid w-100" style="object-fit: cover; height: 280px;">
                             <div class="position-absolute bottom-0 start-0 p-3 w-100" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
                                 <h2 class="text-white fw-bold fst-italic mb-0" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">MÁXIMA<br>VELOCIDAD</h2>
                                 <small class="text-warning fw-bold d-block mt-1">LIGA FUTSAL NACIONAL</small>
@@ -156,7 +167,7 @@
                         <div class="position-absolute" style="bottom:-8px; left:-8px; width: 45px; height: 45px; border-bottom: 2px solid #dc3545; border-left: 2px solid #dc3545; border-bottom-left-radius: 12px;"></div>
                         
                         <div class="rounded-4 overflow-hidden position-relative shadow" style="border: 4px solid #dc3545; z-index: 1;">
-                            <img src="assets/images/ENTRENAMIENTO.png" class="img-fluid w-100" style="object-fit: cover; height: 280px;">
+                            <img src="assets/images/ENTRENAMIENTO.jpg" class="img-fluid w-100" style="object-fit: cover; height: 280px;">
                             <div class="position-absolute bottom-0 start-0 p-3 w-100" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
                                 <h2 class="text-white fw-bold fst-italic mb-0" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">TIPS DE<br>ENTRENAMIENTO</h2>
                                 <small class="text-info fw-bold d-block mt-1">NUTRICIÓN Y DEPORTE EFICAZ</small>
@@ -164,7 +175,7 @@
                         </div>
                     </div>
                     <div class="col-md-7 ps-md-5">
-                        <p class="fs-4 text-dark opacity-75" style="line-height: 1.5; font-family: sans-serif;">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
+                        <p class="fs-4 text-dark opacity-75" style="line-height: 1.5;">Entrenar bien también es comer bien. En esta entrega compartimos recomendaciones prácticas de nuestros entrenadores para mejorar tu rendimiento: rutinas de calentamiento, hábitos de hidratación y una alimentación equilibrada que potencie tu recuperación. Pequeños cambios que, sostenidos en el tiempo, marcan una gran diferencia dentro y fuera de la cancha.</p>
                     </div>
                 </div>
 
@@ -173,20 +184,40 @@
     </main>
 
     <div class="curve-divider curve-divider-footer mt-5"></div>
-    <footer class="bg-white text-dark py-4">
-        <div class="container-fluid px-5">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    <h5 class="text-uppercase mb-2">Información Pertinente</h5>
-                    <p class="mb-1">&copy; 2026 Deportes. Todos los derechos reservados.</p>
-                    <p class="mb-0">Email: contacto@deportes.com | Tel: +123 456 7890</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
+    <footer class="site-footer pt-5 pb-4">
+        <div class="container">
+            <div class="row gy-4 align-items-start">
+                <div class="col-md-4 text-center text-md-start">
                     <a href="index.html">
-                        <img src="./assets/images/Logo.png" alt="Logo Footer" style="max-width: 200px;">
+                        <img src="./assets/images/Logo.png" alt="Logo Cantera" style="max-width: 180px;">
                     </a>
+                    <p class="footer-meta mt-3 mb-0">Deporte, formación y comunidad en Soacha. Formamos talento en fútbol, futsal, baloncesto y voleibol.</p>
+                </div>
+                <div class="col-6 col-md-4 text-center">
+                    <h5 class="text-uppercase mb-3">Navegación</h5>
+                    <div class="d-flex flex-column gap-2">
+                        <a class="footer-link" href="index.html">Inicio</a>
+                        <a class="footer-link" href="deportes.html">Torneos</a>
+                        <a class="footer-link" href="escuelas.html">Escuelas</a>
+                        <a class="footer-link" href="nosotros.html">Nosotros</a>
+                        <a class="footer-link" href="blog.html">Blog</a>
+                        <a class="footer-link" href="contacto.html">Contacto</a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 text-center text-md-start">
+                    <h5 class="text-uppercase mb-3">Contacto</h5>
+                    <p class="footer-meta mb-2"><i class="bi bi-geo-alt me-2"></i>Soacha, Cundinamarca</p>
+                    <p class="footer-meta mb-2"><i class="bi bi-envelope me-2"></i>contacto@cantera.co</p>
+                    <p class="footer-meta mb-3"><i class="bi bi-whatsapp me-2"></i>301 8318624</p>
+                    <div class="footer-social d-flex justify-content-center justify-content-md-start gap-2">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
                 </div>
             </div>
+            <hr class="my-4" style="border-color: rgba(0,0,0,0.1);">
+            <p class="footer-meta text-center mb-0">&copy; 2026 Cantera. Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -200,9 +231,7 @@
             }
         };
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

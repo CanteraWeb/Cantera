@@ -4,78 +4,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Contacto | Cantera</title>
+    <meta name="description" content="Contáctanos y sé parte del movimiento deportivo de Soacha. Escríbenos por correo o WhatsApp y síguenos en redes sociales.">
+    <link rel="icon" type="image/png" href="assets/images/Logo.png">
+    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="assets/CSS/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
 </head>
 
 <body>
 
     <header class="fixed-top shadow-sm w-100" style="background-color: #f4f4f4;">
-        <nav class="navbar navbar-expand" style="background-color: #f4f4f4;">
+        <nav class="navbar navbar-expand-lg" style="background-color: #f4f4f4;">
             <div class="container">
-                <a href="index.html"><img class="imagen-logo navbar-brand" src="./assets/images/Logo.png" alt="Logo"></a>
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Deportes
-                        </a>
-                        <ul class="dropdown-menu shadow border-0">
-                            <li><a class="dropdown-item" href="deportes.html">Torneos</a></li>
-                            <li><a class="dropdown-item" href="escuelas.html">Escuelas</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="nosotros.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
-                    <button class="btn btn-outline-info" type="submit">Buscar</button>
-                </form>
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img class="imagen-logo" src="./assets/images/Logo.png" alt="Logo Cantera">
+                </a>
+                <!-- Botón Hamburguesa -->
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navCantera" aria-controls="navCantera" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Contenido colapsable -->
+                <div class="collapse navbar-collapse" id="navCantera">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Deportes
+                            </a>
+                            <ul class="dropdown-menu shadow border-0 text-center text-lg-start">
+                                <li><a class="dropdown-item" href="deportes.html">Torneos</a></li>
+                                <li><a class="dropdown-item" href="escuelas.html">Escuelas</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3 mt-lg-0" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
+                        <button class="btn btn-outline-info" type="submit">Buscar</button>
+                    </form>
+                </div>
             </div>
         </nav>
     </header>
-    <main style="background-color: #f4f4f4;">
+    <main>
         <!-- SECCIÓN SUPERIOR DE LOGOS FLOTANTES -->
-        <section class="position-relative" style="background: url('ball.svg') repeat; background-size: 80px; padding: 50px 0 60px 0;">
-            <!-- Overlay para atenuar el patrón en la parte superior -->
-            <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: #f4f4f4; opacity: 0.95;"></div>
+        <section class="position-relative" style="padding: 50px 0 60px 0;">
             <div class="container position-relative z-index-1">
                 <div class="row justify-content-evenly align-items-center">
                     <div class="col-4 col-md-3 text-center">
-                        <img src="futlog.svg" class="img-fluid" style="height: 140px; filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.25)); color: #dc3545;">
+                        <img src="futlog.svg" class="img-fluid" alt="Futsal" style="height: 140px; filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.25)); color: #dc3545;">
                     </div>
                     <div class="col-4 col-md-3 text-center">
-                        <img src="basklog.svg" class="img-fluid" style="height: 140px; filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.25)); color: #d27827;">
+                        <img src="basklog.svg" class="img-fluid" alt="Baloncesto" style="height: 140px; filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.25)); color: #d27827;">
                     </div>
                     <div class="col-4 col-md-3 text-center">
-                        <img src="vollog.svg" class="img-fluid" style="height: 140px; filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.25)); color: #0d6efd;">
+                        <img src="vollog.svg" class="img-fluid" alt="Voleibol" style="height: 140px; filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.25)); color: #0d6efd;">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Olas de transición superior (Naranja oscuro / Bronce) -->
-        <svg viewBox="0 0 1000 100" preserveAspectRatio="none" style="width: 100%; height: 60px; background: #f4f4f4; margin-top: -20px; position:relative; z-index:2; display: block;">
-            <!-- Pequeños trazos sueltos centrales-->
-            <path vector-effect="non-scaling-stroke" d="M 400,15 Q 500,0 600,15" fill="none" stroke="#d27827" stroke-width="5" stroke-linecap="round"/>
-            <path vector-effect="non-scaling-stroke" d="M 430,35 Q 500,20 570,35" fill="none" stroke="#d27827" stroke-width="2.5" stroke-linecap="round"/>
-            
-            <!-- Trazos sueltos derechos -->
-            <path vector-effect="non-scaling-stroke" d="M 800,45 Q 850,35 900,45" fill="none" stroke="#d27827" stroke-width="4" stroke-linecap="round"/>
-            <path vector-effect="non-scaling-stroke" d="M 820,60 Q 850,50 880,60" fill="none" stroke="#d27827" stroke-width="1.5" stroke-linecap="round"/>
-
-            <!-- Relleno principal de la ola inferior -->
-            <path vector-effect="non-scaling-stroke" d="M 0,65 Q 250,30 500,70 T 1000,50 L 1000,100 L 0,100 Z" fill="#d27827"/>
+        <!-- Olas de transición superior (estilo home: 3 trazos cruzados) -->
+        <svg viewBox="0 0 1000 100" preserveAspectRatio="none" style="width: 100%; height: 70px; margin-top: -20px; position:relative; z-index:2; display: block;">
+            <!-- Relleno hacia el banner -->
+            <path vector-effect="non-scaling-stroke" d="M -10,55 Q 250,15 500,55 T 1010,55 L 1010,100 L -10,100 Z" fill="#d27827"/>
+            <!-- 3 trazos cruzados estilo home -->
+            <path vector-effect="non-scaling-stroke" d="M -10,25 Q 250,55 500,30 T 1010,22" fill="none" stroke="#d27827" stroke-width="8" stroke-linecap="round"/>
+            <path vector-effect="non-scaling-stroke" d="M -10,40 Q 350,5 700,45 T 1010,32" fill="none" stroke="#d27827" stroke-width="4" opacity="0.8" stroke-linecap="round"/>
+            <path vector-effect="non-scaling-stroke" d="M -10,32 Q 150,50 450,15 T 1010,38" fill="none" stroke="#d27827" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
         </svg>
 
         <!-- BANNER DE CONTACTO (Naranja oscuro) -->
@@ -86,7 +91,7 @@
                 </h2>
                 <div class="row justify-content-center">
                     <div class="col-md-9 col-lg-8">
-                        <p class="fs-5" style="line-height: 1.6; font-family: 'Segoe UI', Arial, sans-serif !important; font-weight: 500;">
+                        <p class="fs-5" style="line-height: 1.6; font-family: 'Poppins', sans-serif; font-weight: 500;">
                             ¿Tienes una idea, propuesta o quieres ser parte de Cantera?<br>
                             Tu mensaje puede impulsar nuevas oportunidades, alianzas o historias deportivas.<br>
                             Completa el formulario y únete al movimiento que transforma el deporte en comunidad.
@@ -96,25 +101,79 @@
             </div>
         </section>
 
-        <!-- Olas de transición inferior (Naranja oscuro a Blanco) -->
-        <svg viewBox="0 0 1000 100" preserveAspectRatio="none" style="width: 100%; height: 60px; display: block; background: #f4f4f4; margin-top: -1px;">
-            <!-- Parte solida conectada arriba -->
-            <path vector-effect="non-scaling-stroke" d="M 0,0 L 1000,0 L 1000,40 Q 750,-10 500,40 T 0,30 Z" fill="#d27827"/>
-            
-            <!-- Trazos sueltos inferior izquierda -->
-            <path vector-effect="non-scaling-stroke" d="M 250,55 Q 320,70 390,55" fill="none" stroke="#d27827" stroke-width="5" stroke-linecap="round"/>
-            <path vector-effect="non-scaling-stroke" d="M 270,75 Q 320,85 370,75" fill="none" stroke="#d27827" stroke-width="2.5" stroke-linecap="round"/>
-
-            <!-- Trazos sueltos inferior derecha -->
-            <path vector-effect="non-scaling-stroke" d="M 800,50 Q 860,70 920,50" fill="none" stroke="#d27827" stroke-width="4" stroke-linecap="round"/>
-            <path vector-effect="non-scaling-stroke" d="M 820,70 Q 860,85 900,70" fill="none" stroke="#d27827" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- Olas de transición inferior (estilo home: 3 trazos cruzados) -->
+        <svg viewBox="0 0 1000 100" preserveAspectRatio="none" style="width: 100%; height: 70px; display: block; margin-top: -1px;">
+            <!-- Relleno desde el banner -->
+            <path vector-effect="non-scaling-stroke" d="M -10,0 L 1010,0 L 1010,45 Q 750,5 500,45 T -10,45 Z" fill="#d27827"/>
+            <!-- 3 trazos cruzados estilo home -->
+            <path vector-effect="non-scaling-stroke" d="M -10,62 Q 250,92 500,67 T 1010,60" fill="none" stroke="#d27827" stroke-width="8" stroke-linecap="round"/>
+            <path vector-effect="non-scaling-stroke" d="M -10,75 Q 350,40 700,80 T 1010,68" fill="none" stroke="#d27827" stroke-width="4" opacity="0.8" stroke-linecap="round"/>
+            <path vector-effect="non-scaling-stroke" d="M -10,68 Q 150,88 450,52 T 1010,74" fill="none" stroke="#d27827" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
         </svg>
 
+        <!-- FORMULARIO DE CONTACTO -->
+        <section class="position-relative" style="padding: 70px 0 80px 0;">
+            <div class="container position-relative z-index-1">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="fw-bold fst-italic text-center mb-2" style="text-transform: uppercase; font-size: 1.8rem; letter-spacing: 1px;">
+                            Escríbenos
+                        </h2>
+                        <p class="text-center text-muted mb-5" style="font-family: 'Poppins', sans-serif;">
+                            Completa el formulario y te responderemos por WhatsApp.
+                        </p>
+
+                        <form id="contactForm" class="bg-white rounded-4 shadow-sm p-4 p-md-5" novalidate
+                              style="font-family: 'Poppins', sans-serif;">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="nombre" class="form-label fw-semibold">Nombre completo</label>
+                                    <input type="text" class="form-control form-control-lg" id="nombre" name="nombre" required>
+                                    <div class="invalid-feedback">Por favor escribe tu nombre.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="telefono" class="form-label fw-semibold">Teléfono</label>
+                                    <input type="tel" class="form-control form-control-lg" id="telefono" name="telefono"
+                                           inputmode="tel" placeholder="Opcional">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="correo" class="form-label fw-semibold">Correo electrónico</label>
+                                    <input type="email" class="form-control form-control-lg" id="correo" name="correo" required>
+                                    <div class="invalid-feedback">Escribe un correo válido.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="interes" class="form-label fw-semibold">Me interesa</label>
+                                    <select class="form-select form-select-lg" id="interes" name="interes">
+                                        <option value="Torneos">Torneos</option>
+                                        <option value="Escuelas de formación">Escuelas de formación</option>
+                                        <option value="Alianza o propuesta">Alianza o propuesta</option>
+                                        <option value="Otro">Otro</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="mensaje" class="form-label fw-semibold">Mensaje</label>
+                                    <textarea class="form-control form-control-lg" id="mensaje" name="mensaje" rows="4" required></textarea>
+                                    <div class="invalid-feedback">Cuéntanos en qué podemos ayudarte.</div>
+                                </div>
+                                <div class="col-12 d-flex flex-column flex-sm-row justify-content-center gap-3 mt-2">
+                                    <button type="submit" class="btn btn-lg px-4 text-white fw-bold"
+                                            style="background-color: #25D366;">
+                                        <i class="bi bi-whatsapp me-2"></i>Enviar por WhatsApp
+                                    </button>
+                                    <button type="button" id="emailBtn" class="btn btn-lg px-4 text-white fw-bold"
+                                            style="background-color: #dc3545;">
+                                        <i class="bi bi-envelope me-2"></i>Enviar por correo
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- SECCIÓN DE INFORMACIÓN DE CONTACTO -->
-        <section class="position-relative" style="background: url('ball.svg') repeat; background-size: 80px; padding: 60px 0 100px 0;">
-            <!-- Overlay blanco hueso para atenuar el patrón -->
-            <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: #f4f4f4; opacity: 0.95;"></div>
-            
+        <section class="position-relative" style="padding: 60px 0 100px 0;">
             <div class="container position-relative z-index-1 text-center">
                 <h2 class="fw-bold fst-italic mb-3" style="text-transform: uppercase; font-size: 1.8rem; letter-spacing: 1px;">
                     INFORMACIÓN DE CONTACTO
@@ -128,13 +187,13 @@
                     <div class="position-relative z-index-1 mb-5">
                         <h4 class="fw-bold fst-italic mb-4" style="text-transform: uppercase; font-size: 1.4rem;">REDES SOCIALES</h4>
                         <div class="d-flex flex-column align-items-center gap-2 mt-3">
-                            <a href="#" class="text-dark text-decoration-none fs-5 d-flex align-items-center" style="font-family: 'Segoe UI', Arial, sans-serif !important; font-weight: 700;">
+                            <a href="#" class="text-dark text-decoration-none fs-5 d-flex align-items-center" style="font-family: 'Poppins', sans-serif; font-weight: 700;">
                                 <i class="bi bi-facebook fs-4 me-2"></i> Facebook
                             </a>
-                            <a href="#" class="text-dark text-decoration-none fs-5 d-flex align-items-center" style="font-family: 'Segoe UI', Arial, sans-serif !important; font-weight: 700;">
+                            <a href="#" class="text-dark text-decoration-none fs-5 d-flex align-items-center" style="font-family: 'Poppins', sans-serif; font-weight: 700;">
                                 <i class="bi bi-instagram fs-4 me-2"></i> Instagram
                             </a>
-                            <a href="#" class="text-dark text-decoration-none fs-5 d-flex align-items-center" style="font-family: 'Segoe UI', Arial, sans-serif !important; font-weight: 700;">
+                            <a href="#" class="text-dark text-decoration-none fs-5 d-flex align-items-center" style="font-family: 'Poppins', sans-serif; font-weight: 700;">
                                 <i class="bi bi-tiktok fs-4 me-2"></i> TikTok
                             </a>
                         </div>
@@ -143,11 +202,11 @@
                     <div class="position-relative z-index-1 mt-5">
                         <h4 class="fw-bold fst-italic mb-4" style="text-transform: uppercase; font-size: 1.4rem;">CONTACTO DIRECTO</h4>
                         <div class="d-flex flex-column align-items-center gap-3 mt-3">
-                            <p class="mb-0 fs-5 text-dark" style="font-family: 'Segoe UI', Arial, sans-serif !important; font-weight: 600;">
-                                Correo electrónico: contacto@cantera.co
+                            <p class="mb-0 fs-5 text-dark" style="font-family: 'Poppins', sans-serif; font-weight: 600;">
+                                Correo electrónico: <a href="mailto:contacto@cantera.co" class="text-danger text-decoration-none">contacto@cantera.co</a>
                             </p>
-                            <p class="mb-0 fs-5 text-dark d-flex align-items-center" style="font-family: 'Segoe UI', Arial, sans-serif !important; font-weight: 600;">
-                                Número de contacto: <i class="bi bi-whatsapp fs-4 mx-2"></i> 301 8318624
+                            <p class="mb-0 fs-5 text-dark d-flex align-items-center" style="font-family: 'Poppins', sans-serif; font-weight: 600;">
+                                Número de contacto: <a href="https://wa.me/573018318624" target="_blank" rel="noopener" class="text-dark text-decoration-none d-flex align-items-center"><i class="bi bi-whatsapp fs-4 mx-2"></i> 301 8318624</a>
                             </p>
                         </div>
                     </div>
@@ -158,20 +217,40 @@
     </main>
 
     <div class="curve-divider curve-divider-footer my-0" style="height: 45px; transform: scaleY(0.7); background-color: #f4f4f4;"></div>
-    <footer class="text-dark py-4" style="background-color: #f4f4f4;">
-        <div class="container-fluid px-5">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    <h5 class="text-uppercase mb-2">Información Pertinente</h5>
-                    <p class="mb-1">&copy; 2026 Deportes. Todos los derechos reservados.</p>
-                    <p class="mb-0">Email: contacto@deportes.com | Tel: +123 456 7890</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
+    <footer class="site-footer pt-5 pb-4">
+        <div class="container">
+            <div class="row gy-4 align-items-start">
+                <div class="col-md-4 text-center text-md-start">
                     <a href="index.html">
-                        <img src="./assets/images/Logo.png" alt="Logo Footer" style="max-width: 200px;">
+                        <img src="./assets/images/Logo.png" alt="Logo Cantera" style="max-width: 180px;">
                     </a>
+                    <p class="footer-meta mt-3 mb-0">Deporte, formación y comunidad en Soacha. Formamos talento en fútbol, futsal, baloncesto y voleibol.</p>
+                </div>
+                <div class="col-6 col-md-4 text-center">
+                    <h5 class="text-uppercase mb-3">Navegación</h5>
+                    <div class="d-flex flex-column gap-2">
+                        <a class="footer-link" href="index.html">Inicio</a>
+                        <a class="footer-link" href="deportes.html">Torneos</a>
+                        <a class="footer-link" href="escuelas.html">Escuelas</a>
+                        <a class="footer-link" href="nosotros.html">Nosotros</a>
+                        <a class="footer-link" href="blog.html">Blog</a>
+                        <a class="footer-link" href="contacto.html">Contacto</a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 text-center text-md-start">
+                    <h5 class="text-uppercase mb-3">Contacto</h5>
+                    <p class="footer-meta mb-2"><i class="bi bi-geo-alt me-2"></i>Soacha, Cundinamarca</p>
+                    <p class="footer-meta mb-2"><i class="bi bi-envelope me-2"></i><a href="mailto:contacto@cantera.co" class="footer-link">contacto@cantera.co</a></p>
+                    <p class="footer-meta mb-3"><i class="bi bi-whatsapp me-2"></i>301 8318624</p>
+                    <div class="footer-social d-flex justify-content-center justify-content-md-start gap-2">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
                 </div>
             </div>
+            <hr class="my-4" style="border-color: rgba(0,0,0,0.1);">
+            <p class="footer-meta text-center mb-0">&copy; 2026 Cantera. Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -184,10 +263,63 @@
                 header.classList.remove("header-active");
             }
         };
+
+        // Envío del formulario de contacto (WhatsApp o correo)
+        (function () {
+            var form = document.getElementById("contactForm");
+            if (!form) return;
+            var WHATSAPP_NUMBER = "573018318624";   // 301 8318624 (Colombia)
+            var CORREO_DESTINO = "contacto@cantera.co";
+
+            // Valida el formulario y devuelve los datos, o null si no es válido
+            function obtenerDatos() {
+                if (!form.checkValidity()) {
+                    form.classList.add("was-validated");
+                    form.reportValidity();
+                    return null;
+                }
+                return {
+                    nombre: form.nombre.value.trim(),
+                    correo: form.correo.value.trim(),
+                    telefono: form.telefono.value.trim(),
+                    interes: form.interes.value,
+                    mensaje: form.mensaje.value.trim()
+                };
+            }
+
+            function cuerpoMensaje(d) {
+                return "Hola Cantera, soy " + d.nombre + ".\n" +
+                    "Interés: " + d.interes + "\n" +
+                    "Correo: " + d.correo + "\n" +
+                    (d.telefono ? "Teléfono: " + d.telefono + "\n" : "") +
+                    "\nMensaje: " + d.mensaje;
+            }
+
+            // Ruta WhatsApp (botón "Enviar por WhatsApp" / submit)
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                var d = obtenerDatos();
+                if (!d) return;
+                var url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(cuerpoMensaje(d));
+                window.open(url, "_blank", "noopener");
+            });
+
+            // Ruta correo electrónico (botón "Enviar por correo")
+            var emailBtn = document.getElementById("emailBtn");
+            if (emailBtn) {
+                emailBtn.addEventListener("click", function () {
+                    var d = obtenerDatos();
+                    if (!d) return;
+                    var asunto = "Contacto web - " + d.interes + " - " + d.nombre;
+                    var url = "mailto:" + CORREO_DESTINO +
+                        "?subject=" + encodeURIComponent(asunto) +
+                        "&body=" + encodeURIComponent(cuerpoMensaje(d));
+                    window.location.href = url;
+                });
+            }
+        })();
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

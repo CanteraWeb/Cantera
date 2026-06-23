@@ -1,35 +1,109 @@
+/* Poppins servida localmente (sin depender de Google Fonts / internet) */
+@import url('../vendor/fonts/poppins-local.css');
+
 @font-face {
   font-family: 'AmericanJets-PersonalUsed';
   src: url('../../fonts/AmericanJetsPersonalUsed.woff') format('woff');
-       
+
   font-weight: normal;
   font-style: normal;
 }
 
 .imagen-logo {
-    width: 220px;
+    width: 160px;
+    transition: transform 0.3s ease;
+    height: auto;
 }
 
-* {
-    font-family: 'AmericanJets-PersonalUsed' !important;    
+/* ===== Sistema tipográfico =====
+   American Jets (fuente característica) -> títulos, logo, menú y botones principales.
+   Poppins (limpia y legible) -> textos largos, párrafos y contenido. */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #1f2329;
+    line-height: 1.65;
+    position: relative;
+    background-color: #f6f7f9;
 }
 
-.bg-gradient {
-    background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
+/* ===== Fondo de marca: patrón sutil de balones de Cantera =====
+   Capa fija detrás de TODO el contenido. Como está en styles.css,
+   aparece en todas las páginas automáticamente. */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url('../../ball.svg');
+    background-repeat: repeat;
+    background-size: 85px 85px;
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: -1;
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar-brand,
+.nav-link,
+.dropdown-toggle,
+.btn,
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+    font-family: 'AmericanJets-PersonalUsed', sans-serif !important;
+    letter-spacing: 0.3px;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+h1, .display-1, .display-2, .display-3, .display-4 {
+    line-height: 1.1;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+/* Contenedor del banner. Se renombra el degradado a una clase propia
+   (.hero-fade) para no chocar con la utilidad .bg-gradient de Bootstrap,
+   que trae !important y pisaba este efecto. */
+.hero-fade {
     position: relative;
     display: block;
     width: 100%;
 }
 
-.bg-gradient::after {
+/* Degradado gris claro -> transparente que se sobrepone ligeramente sobre
+   el borde superior de la imagen, fundiéndola con la cabecera. */
+.hero-fade::after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 50%;
-    background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+    height: 45%;
+    background: linear-gradient(to bottom,
+        #f4f4f4 0%,
+        rgba(244, 244, 244, 0.55) 30%,
+        rgba(244, 244, 244, 0) 100%);
     pointer-events: none;
+    z-index: 2;
 }
 
 .imagen-banner {
@@ -43,29 +117,40 @@
 
 .nav-link {
     font-family: 'AmericanJets-PersonalUsed', sans-serif;
-    color: black;
-    font-size: 36px;
-    transition: all 0.3s ease-in-out;
+    color: #1f2329;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+    padding: 0 12px;
 }
 
 .nav-link:hover {
-    transform: scale(1.1);
-    opacity: 0.7;
-    color: #444;
+    color: #dc3545;
+    border-bottom: 2px solid #dc3545;
 }
 
 .card {
     margin-bottom: 20px;
+    border: 1px solid #e8ecf1;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
 /* Ajustes para Móviles y Tabletas */
 @media (max-width: 991px) {
     .nav-link {
-        font-size: 24px;
-        margin: 10px 0;
+        font-size: 16px;
+        margin: 8px 0;
     }
     .imagen-logo {
-        width: 150px;
+        width: 120px;
     }
     body {
         padding-top: 75px; /* Menor espacio arriba en móviles */
@@ -83,6 +168,15 @@
 @media (max-width: 768px) {
     .hero {
         padding: 80px 0;
+    }
+    
+    .navbar-brand {
+        margin-right: auto !important;
+    }
+    
+    .d-flex.mt-3.mt-lg-0 {
+        width: 100%;
+        margin-top: 15px !important;
     }
 }
 
@@ -116,12 +210,63 @@
 }
 
 body {
-    padding-top: 110px;
+    padding-top: 85px;
+}
+
+/* Mejoras generales de espaciado */
+section {
+    margin: 0;
+    padding: 60px 0;
+}
+
+section h1, section h2 {
+    margin-bottom: 40px;
+    color: #1f2329;
+}
+
+section p {
+    line-height: 1.8;
+    color: #5a616b;
+    font-size: 16px;
 }
 
 /* Animación para el Header */
 header {
     transition: all 0.4s ease-in-out;
+    background-color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+header nav {
+    background-color: #ffffff !important;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* Barra de búsqueda refinada */
+.form-control {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+.btn-outline-info {
+    border-color: #dc3545;
+    color: #dc3545;
+    font-size: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-info:hover {
+    background-color: #dc3545;
+    border-color: #dc3545;
 }
 
 .header-active {
@@ -136,4 +281,171 @@ header {
     to {
         transform: translateY(0);
     }
+}
+
+/* ===== Pulido profesional ===== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mejor legibilidad en párrafos de contenido */
+main p {
+    color: #3a3f47;
+    font-size: 16px;
+}
+
+/* Botones principales: transición y elevación sutil */
+.btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 10px 24px;
+}
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.btn-primary {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-primary:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+}
+
+/* Menú desplegable más refinado */
+.dropdown-menu {
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 8px;
+    border: 1px solid #e8ecf1;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.dropdown-item {
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 15px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.dropdown-item:hover {
+    background-color: #f5f5f5;
+    color: #dc3545;
+}
+
+/* ===== Footer profesional unificado ===== */
+.site-footer {
+    background-color: #1f2329;
+    color: #ffffff;
+    border-top: 1px solid rgba(220, 53, 69, 0.2);
+    padding-top: 60px !important;
+    padding-bottom: 30px !important;
+}
+.site-footer h5 {
+    letter-spacing: 1px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    font-family: 'AmericanJets-PersonalUsed', sans-serif;
+}
+.site-footer .footer-link {
+    color: #b8bcc5;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+.site-footer .footer-link:hover {
+    color: #dc3545;
+}
+.site-footer .footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: rgba(220, 53, 69, 0.15);
+    color: #dc3545;
+    font-size: 1.2rem;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+.site-footer .footer-social a:hover {
+    transform: translateY(-3px);
+    background-color: #dc3545;
+    color: #ffffff;
+}
+.site-footer .footer-meta {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #b8bcc5;
+    margin-bottom: 8px;
+}
+.site-footer hr {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mejoras del navbar toggler para mobile */
+.navbar-toggler {
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 6px;
+    padding: 6px 12px !important;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1) !important;
+    border-color: #dc3545 !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%231f2329' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Navbar collapse mejorada */
+.navbar-collapse {
+    background-color: #ffffff;
+    border-radius: 0 0 8px 8px;
+    margin-top: 8px;
+    padding: 16px;
+}
+
+/* Container padding mejorado */
+.container {
+    max-width: 1200px;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+/* ===== "Ver Actividades": solo el balón de Cantera ===== */
+.actividades-card {
+    transition: transform 0.3s ease;
+}
+.actividades-card:hover {
+    transform: translateY(-6px);
+}
+.actividades-ball {
+    width: 190px;
+    height: 190px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.18));
+    transition: transform 0.6s ease;
+}
+.actividades-card:hover .actividades-ball {
+    transform: rotate(18deg) scale(1.06);
+}
+.actividades-titulo {
+    color: #1f2329;
 }
